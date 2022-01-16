@@ -1,15 +1,11 @@
-
 import 'dart:io';
-
-import 'package:devicelocale/devicelocale.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:projectone/ui/widget/main_widget.dart';
-import 'package:sizer/sizer.dart';
 
 void main() async {
- 
-  String locale = await Platform.localeName;
+  String locale = Platform.localeName;
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   runApp(
@@ -27,14 +23,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return MaterialApp(
-        localizationsDelegates: context.localizationDelegates,
-        supportedLocales: context.supportedLocales,
-        locale: context.locale,
-        home: MainWidget(),
-      );
-    });
+    return ScreenUtilInit(
+        minTextAdapt: true,
+         splitScreenMode: true,
+        builder: () => MaterialApp(
+          debugShowCheckedModeBanner: false,
+              localizationsDelegates: context.localizationDelegates,
+              supportedLocales: context.supportedLocales,
+              locale: context.locale,
+              home: MainWidget(),
+            ));
   }
 }
 
@@ -46,6 +44,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        // body: Center(
+        //   child: RaisedButton(
+        //     onPressed: () {
+        //       print(MediaQuery.of(context).size.width.toString());
+        //       print(MediaQuery.of(context).size.height.toString());
+        //     },
+        //   ),
+        // ),
+        );
   }
 }

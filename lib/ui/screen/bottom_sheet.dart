@@ -1,6 +1,7 @@
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
-import 'package:projectone/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:projectone/ui/screen/scerrn1.dart';
 
 class BottomSheetWidget extends StatelessWidget {
@@ -8,22 +9,43 @@ class BottomSheetWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final text = GoogleFonts.cairo(
+      fontSize: MediaQuery.of(context).orientation == Orientation.portrait
+          ? 25.sp
+          : 30.sp,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    );
+    final user = GoogleFonts.cairo(
+      fontSize: MediaQuery.of(context).orientation == Orientation.portrait
+          ? 19.sp
+          : 24.sp,
+      fontWeight: FontWeight.w400,
+      color: Colors.grey,
+    );
+    final userPro = GoogleFonts.cairo(
+      fontSize: MediaQuery.of(context).orientation == Orientation.portrait
+          ? 15.sp
+          : 25.sp,
+      fontWeight: FontWeight.w400,
+      color: Colors.black,
+    );
     return DraggableScrollableSheet(
       initialChildSize: 0.3,
-      maxChildSize: 0.85,
+      maxChildSize: 0.87,
       builder: (BuildContext context, ScrollController scrollController) {
         return Container(
-          height: 200,
+          //  height: 200,
           decoration: new BoxDecoration(
               color: Colors.white,
               borderRadius: new BorderRadius.only(
-                  topLeft: const Radius.circular(40.0),
-                  topRight: const Radius.circular(40.0))),
+                  topLeft: Radius.circular(MediaQuery.of(context).orientation == Orientation.portrait?40.w:25.w),
+                  topRight: Radius.circular(MediaQuery.of(context).orientation == Orientation.portrait?40.w:25.w))),
           child: ListView(
             controller: scrollController,
             children: [
               SizedBox(
-                height: 15,
+                height: 2.h,
               ),
               Center(
                   child: Text(
@@ -32,12 +54,18 @@ class BottomSheetWidget extends StatelessWidget {
               )),
               Divider(
                 color: Colors.amber,
-                thickness: 5,
-                indent: 150,
-                endIndent: 150,
+                thickness: MediaQuery.of(context).orientation == Orientation.portrait?2.w:1.w,
+                indent:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? 150.w
+                        : 160.w,
+                endIndent:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? 150.w
+                        : 160.w,
               ),
               SizedBox(
-                height: 40,
+                height: 2.h,
               ),
               GestureDetector(
                 onTap: () {
@@ -46,19 +74,19 @@ class BottomSheetWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 10,
+                      width:MediaQuery.of(context).orientation == Orientation.portrait?10.w:12.w,
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20), // Image border
+                      borderRadius: BorderRadius.circular(10.w), // Image border
                       child: SizedBox.fromSize(
-                        size: Size.fromRadius(50), // Image radius
+                        size: Size.fromRadius(MediaQuery.of(context).orientation == Orientation.portrait?50.w:25.w), // Image radius
                         child: Image.network(
                             'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80',
                             fit: BoxFit.cover),
                       ),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 8.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,7 +109,7 @@ class BottomSheetWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 12.h,
               ),
               GestureDetector(
                 onTap: () {
@@ -93,19 +121,19 @@ class BottomSheetWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 10,
+                       width:MediaQuery.of(context).orientation == Orientation.portrait?10.w:12.w,
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20), // Image border
+                      borderRadius: BorderRadius.circular(10.w), // Image border
                       child: SizedBox.fromSize(
-                        size: Size.fromRadius(50), // Image radius
+                        size: Size.fromRadius(MediaQuery.of(context).orientation == Orientation.portrait?50.w:25.w), // Image radius
                         child: Image.network(
                             'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=8',
                             fit: BoxFit.cover),
                       ),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 8.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +156,7 @@ class BottomSheetWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 12.h,
               ),
               GestureDetector(
                 onTap: () {
@@ -137,19 +165,19 @@ class BottomSheetWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 10,
+                       width:MediaQuery.of(context).orientation == Orientation.portrait?10.w:12.w,
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20), // Image border
+                      borderRadius: BorderRadius.circular(10.w), // Image border
                       child: SizedBox.fromSize(
-                        size: Size.fromRadius(50), // Image radius
+                        size: Size.fromRadius(MediaQuery.of(context).orientation == Orientation.portrait?50.w:25.w), // Image radius
                         child: Image.network(
                             'https://images.unsplash.com/photo-1496180727794-817822f65950?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
                             fit: BoxFit.cover),
                       ),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 8.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -172,10 +200,10 @@ class BottomSheetWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height:  MediaQuery.of(context).orientation == Orientation.portrait?15.h:15.h,
               ),
               Container(
-                margin: EdgeInsets.only(left: 10 , right: 10),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 child: Text(
                   "top_authors".tr(),
                   style: text,

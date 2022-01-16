@@ -1,21 +1,51 @@
+
+// ignore: implementation_imports
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import 'package:projectone/constant.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+final regularText = GoogleFonts.cairo(
+  fontSize: MediaQuery.of(context).orientation == Orientation.portrait ? 12.sp : 15.sp,
+  fontWeight: FontWeight.w300,
+  color: Colors.white,
+);
+final user = GoogleFonts.cairo(
+  fontSize: MediaQuery.of(context).orientation == Orientation.portrait ? 19.sp : 24.sp,
+  fontWeight: FontWeight.w400,
+  color: Colors.grey,
+);
+final userPro = GoogleFonts.cairo(
+  fontSize:MediaQuery.of(context).orientation == Orientation.portrait ? 15.sp : 25.sp,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+final screen = GoogleFonts.cairo(
+  fontSize: MediaQuery.of(context).orientation == Orientation.portrait ? 35.sp : 35.sp,
+  fontWeight: FontWeight.w700,
+  color: Colors.black,
+);
+final regularTextSc = GoogleFonts.cairo(
+  fontSize: MediaQuery.of(context).orientation == Orientation.portrait ? 10.sp : 15.sp,
+  fontWeight: FontWeight.w300,
+  color: Colors.grey,
+);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
       extendBodyBehindAppBar: true,
-      body: Column(
+      body: ListView(
+        padding: EdgeInsets.zero,
         children: [
           SizedBox(
             child: Image.network(
@@ -35,12 +65,16 @@ class Screen1 extends StatelessWidget {
               ),
               Container(
                 // margin: EdgeInsets.only(left: 5 , right: 5),
-                width: 250,
+                width:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? 250
+                        : 450,
                 child: Text(
                   "minimalism".tr(),
                   style: screen,
                 ),
               ),
+              Spacer(),
               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.orange[50],
@@ -62,8 +96,7 @@ class Screen1 extends StatelessWidget {
             ],
           ),
           Container(
-
-            margin: EdgeInsets.only(left: 10 ),
+            margin: EdgeInsets.only(left: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
