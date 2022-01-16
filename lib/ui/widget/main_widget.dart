@@ -1,3 +1,4 @@
+import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:projectone/constant.dart';
@@ -59,7 +60,7 @@ class MainWidget extends StatelessWidget {
             Container(
               width: double.infinity,
               child: Text(
-                "Browse",
+                "browse".tr(),
                 style: primaryText,
                 textAlign: TextAlign.center,
               ),
@@ -70,7 +71,7 @@ class MainWidget extends StatelessWidget {
             Container(
               width: double.infinity,
               child: Text(
-                "Find podcasts that suit to your interest",
+                 "text_find".tr(),
                 style: regularText,
                 textAlign: TextAlign.center,
               ),
@@ -103,7 +104,7 @@ class MainWidget extends StatelessWidget {
                       textAlignVertical: TextAlignVertical.center,
                       // textAlign: TextAlign.center,
                       decoration: InputDecoration(
-                        hintText: "Type keyword ",
+                        hintText: "type_keyword".tr(),
                         hintStyle: regularTextSearch,
                         border: InputBorder.none,
                       ),
@@ -144,7 +145,7 @@ class MainWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Popular",
+                      "popular".tr(),
                       style: regularText,
                     ),
                   ],
@@ -178,7 +179,7 @@ class MainWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Trending",
+                      "trending".tr(),
                       style: regularText,
                     ),
                   ],
@@ -210,7 +211,7 @@ class MainWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Recent",
+                      "recent".tr(),
                       style: regularText,
                     ),
                   ],
@@ -244,7 +245,7 @@ class MainWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Magic",
+                      "magic".tr(),
                       style: regularText,
                     ),
                   ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -33,9 +34,10 @@ class Screen1 extends StatelessWidget {
                 width: 5,
               ),
               Container(
+                // margin: EdgeInsets.only(left: 5 , right: 5),
                 width: 250,
                 child: Text(
-                  "Minimalism Lifestyle",
+                  "minimalism".tr(),
                   style: screen,
                 ),
               ),
@@ -60,16 +62,17 @@ class Screen1 extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+
+            margin: EdgeInsets.only(left: 10 ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Being the savages bowsman, that is.",
+                  "being".tr(),
                   style: user,
                 ),
                 Text(
-                  "the person who pulled the bow-oar in his boat ",
+                  "the_person".tr(),
                   style: user,
                 ),
               ],
@@ -132,17 +135,17 @@ class Screen1 extends StatelessWidget {
                             // do something
                           }),
                     ),
-                      decoration: new BoxDecoration(
+                    decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       border: new Border.all(
                         color: Colors.amber,
-                        width:0.2,
+                        width: 0.2,
                       ),
                     ),
                   ),
                   Text(
-                    "Popular",
-                    style: regularText,
+                    "popular".tr(),
+                    style: userPro,
                   ),
                 ],
               ),
@@ -170,13 +173,13 @@ class Screen1 extends StatelessWidget {
                       shape: BoxShape.circle,
                       border: new Border.all(
                         color: Colors.amber,
-                        width:0.2,
+                        width: 0.2,
                       ),
                     ),
                   ),
                   Text(
-                    "Trending",
-                    style: regularText,
+                    "trending".tr(),
+                    style: userPro,
                   ),
                 ],
               ),
@@ -198,17 +201,17 @@ class Screen1 extends StatelessWidget {
                             // do something
                           }),
                     ),
-                      decoration: new BoxDecoration(
+                    decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       border: new Border.all(
                         color: Colors.amber,
-                        width:0.2,
+                        width: 0.2,
                       ),
                     ),
                   ),
                   Text(
-                    "Recent",
-                    style: regularText,
+                    "recent".tr(),
+                    style: userPro,
                   ),
                 ],
               ),

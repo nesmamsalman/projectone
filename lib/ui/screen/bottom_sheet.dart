@@ -1,3 +1,4 @@
+import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:projectone/constant.dart';
 import 'package:projectone/ui/screen/scerrn1.dart';
@@ -26,7 +27,7 @@ class BottomSheetWidget extends StatelessWidget {
               ),
               Center(
                   child: Text(
-                "Handpicked",
+                "handpicked".tr(),
                 style: text,
               )),
               Divider(
@@ -64,7 +65,7 @@ class BottomSheetWidget extends StatelessWidget {
                       children: [
                         Container(
                           child: Text(
-                            "Financial Freedom",
+                            "financial".tr(),
                             style: text,
                           ),
                         ),
@@ -111,7 +112,7 @@ class BottomSheetWidget extends StatelessWidget {
                       children: [
                         Container(
                           child: Text(
-                            "Minimalism Lifestyle",
+                            "minimalism".tr(),
                             style: text,
                           ),
                         ),
@@ -155,7 +156,7 @@ class BottomSheetWidget extends StatelessWidget {
                       children: [
                         Container(
                           child: Text(
-                            "Bisnis Strategy",
+                            "bisnis".tr(),
                             style: text,
                           ),
                         ),
@@ -174,9 +175,9 @@ class BottomSheetWidget extends StatelessWidget {
                 height: 15,
               ),
               Container(
-                margin: EdgeInsets.only(left: 10),
+                margin: EdgeInsets.only(left: 10 , right: 10),
                 child: Text(
-                  "Top Authors",
+                  "top_authors".tr(),
                   style: text,
                 ),
               ),

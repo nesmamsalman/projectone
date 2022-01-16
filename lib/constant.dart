@@ -10,7 +10,7 @@ final primaryText = GoogleFonts.cairo(
 );
 
 final regularText = GoogleFonts.cairo(
-  fontSize: SizerUtil.deviceType == DeviceType.mobile ? 15.sp : 10.sp,
+  fontSize: SizerUtil.deviceType == DeviceType.mobile ? 12.sp : 10.sp,
   fontWeight: FontWeight.w300,
   color: Colors.white,
 );
@@ -30,7 +30,7 @@ final user = GoogleFonts.cairo(
   color: Colors.grey,
 );
 final userPro = GoogleFonts.cairo(
-  fontSize: 17.0,
+  fontSize: 15.0,
   fontWeight: FontWeight.w400,
   color: Colors.black,
 );
